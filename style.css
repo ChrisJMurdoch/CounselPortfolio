@@ -1,0 +1,45 @@
+
+/* Overrides */
+
+body {
+    margin: 0px;
+    font-size: 2vh;
+    line-height: 1em;
+    background-color: snow;
+}
+
+hr {
+    margin: 0.5em 5%;
+    border: 1px solid lightgrey;
+}
+
+/* Classes */
+
+.centrebox {
+    position: absolute;
+    box-sizing: border-box;
+    left: 30vw;
+    top: 30vh;
+    width: 40vw;
+    padding: 2rem;
+    
+    text-align: center;
+    font-size: 2rem;
+
+    box-shadow: 0px 0px 10px lightgrey;
+    background-color: white;
+}
+
+/* Common */
+
+.ttext {
+    color: rgb(37, 37, 37);
+    font-size: 1.25em;
+    font-family: Helvetica;
+}
+
+.stext {
+    color: rgb(77, 77, 77);
+    font-size: 1em;
+    font-family: "Times New Roman";
+}
