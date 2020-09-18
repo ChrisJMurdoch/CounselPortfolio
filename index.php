@@ -4,7 +4,7 @@
     session_start();
 ?>
 
-<html>
+<html lang="en">
 
 <head>
     <!-- Metadata -->
@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Claire, Murdoch, Counselling">
-    <meta name="description" content="Counselling portfolio">
+    <meta name="description" content="Counselling Portfolio">
     <meta name="author" content="Chris Murdoch">
 
     <!-- Styles and scripts -->
@@ -20,12 +20,27 @@
 </head>
 
 <body>
-    <div class="centrebox">
-        <div class="ttext">CLAIRE MURDOCH</div>
-        <hr>
-        <div class="stext">Website coming soon.</div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="ttext">ABOUT ME</a>
+        <a href="#" class="ttext">SESSIONS</a>
+        <a href="#" class="ttext">BOOKINGS</a>
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="titlebox">
+            Claire Murdoch
+            <hr>
+            Counselling
+        </div>
     </div>
-    <?php echo "<div style='position: absolute; right: 5px; bottom: 5px; color: green;'>PHP OK!</div>" ?>
+
+    <!-- Main -->
+    <main>
+        
+    </main>
 </body>
 
 </html>
