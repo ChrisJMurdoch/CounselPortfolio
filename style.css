@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    margin: 0rem;
+    margin: 0px;
     width: 100vw;
     height: 100vh;
 }
@@ -34,55 +34,127 @@ nav a {
     padding: 0.9rem;
     font-size: 1.2rem;
     text-decoration: none;
+    color: rgb(37, 37, 37);
+    font-family: Helvetica;
 }
 
 /* Header/Hero */
 
-.hero {
+header {
     position: relative;
-    overflow: auto;
     width: 100%;
-    height: calc( 60% - 3em );
+    overflow: hidden;
+    transition: height 0.75s ease;
+    height: 0%;
 }
+header.home {
+    height: 50%;
+}
+
 .titlebox {
     position: absolute;
     left: 15%;
     top: calc( 50% - 1.75em );
     height: 3.5em;
     padding: 0.5em;
-    font-size: 3rem;
+    border: 4px solid rgb(30, 30, 30);
     text-align: center;
+    font-size: 3rem;
     color: rgb(30, 30, 30);
     background-color: snow;
-    border: 4px solid rgb(30, 30, 30);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
 }
 .titlebox hr {
-    margin: 0.25em;
+    margin: 0.25em 0.5em;
     border: 2px solid rgb(30, 30, 30);
-    height: 0px;
 }
 
-/* Main */
+/* Main/Content */
 
 main {
+    position: relative;
     width: 100%;
-    height: 40%;
     background-color: snow;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    z-index: -1;
+    transition: all 0.75s ease;
+    overflow: hidden;
+    height: calc( 100% - 3em );
+}
+main.home {
+    height: calc( 50% - 3em );
 }
 
-/* Common */
+/* Section positions and transitions */
 
-.left { float: left; }
-.right { float: right; }
+.homeInfo, .sessionsInfo, .bookingsInfo {
+    position: absolute;
+    width: 100%;
+    padding: 1rem;
+    transition: opacity 0.25s ease;
+    opacity: 0;
+}
+.home .homeInfo, .sessions .sessionsInfo, .bookings .bookingsInfo {
+    opacity: 1;
+}
 
-.ttext {
+/* Home */
+
+.homeInfo {
+    display: flex;
+    justify-content: space-around;
+    height: calc( 50vh - 3rem );
+}
+.homeInfo .card {
+    width: 31%;
+    height: 100%;
+}
+
+/* Sessions */
+
+.sessionsInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc( 100vh - 3rem );
+}
+.sessionsInfo .card {
+    width: 100%;
+    height: 48%;
+}
+
+/* Bookings */
+
+.bookingsInfo {
+    height: calc( 100vh - 3rem );
+}
+.bookingsInfo .card {
+    width: 100%;
+    height: 100%;
+}
+
+/* Cards */
+
+.card {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid grey;
+    background-color: white;
+}
+.card h1 {
+    margin: 0rem;
+    width: 100%;
+    height: 1.8rem;
+    font-size: 1.8rem;
+    font-weight: normal;
     color: rgb(37, 37, 37);
     font-family: Helvetica;
 }
-
-.stext {
+.card p {
+    margin: 1rem 0rem;
+    width: 100%;
+    height: calc(100% - 2rem);
+    font-size: 1.2rem;
     color: rgb(77, 77, 77);
     font-family: "Times New Roman";
 }
